@@ -1,37 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsoleApp5
+namespace ConsoleApp8
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
-            // get a number
-            Console.WriteLine("enter the a number");
-            var input1 = Console.ReadLine();
-            var number1 = double.Parse(input1);     // convert string to double
-
-            // get a number
-            Console.WriteLine("enter the anumber");
-            var input2 = Console.ReadLine();
-            var number2 = double.Parse(input2);     // convert string to double
-
-            // get a number
-            Console.WriteLine("enter the a number");
-            var input3 = Console.ReadLine();
-            var number3 = double.Parse(input3);     // convert string to double
-
-            // get a number
-            Console.WriteLine("enter the a number");
-            var input4 = Console.ReadLine();
-            var number4 = double.Parse(input4);     // convert string to double
-
             List<double> myList = new List<double>();   // a List is a dynamic version of an array
-            myList.Add(number1);
-            myList.Add(number2);
-            myList.Add(number3);
-            myList.Add(number4);
+
+            var input = "";
+            while (input != "x")
+            {
+                Console.WriteLine("enter the a number");
+                input = Console.ReadLine();
+                if (input != "x")
+                {
+                    myList.Add(double.Parse(input)); 
+                }
+            }          
 
             var sum = 0.0;             // declare variable to add sum of the array
 
@@ -52,6 +41,13 @@ namespace ConsoleApp5
             // change #2
             //c3
 
+      
+
+        }
+
+        private static void DoAdd(string input)
+        {
+            throw new NotImplementedException();
         }
     }
 }
