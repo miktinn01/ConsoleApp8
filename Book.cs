@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
+// test change 15:09 7 jun
 namespace ConsoleApp8
 {
     class Book
