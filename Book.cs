@@ -27,24 +27,25 @@ namespace ConsoleApp8
 
         public void CalcStats()
         {
-            var result = 0.0;
+            var aveOfGrades = 0.0;
             var highGrade = double.MinValue;        //inicialize variable to the smallest value possible
             var lowGrade = double.MaxValue;         //inicialize variable to the highest value possible
+            var sumOfGrades = 0.00;
 
-            foreach (var number in grades)       // do this for every number in the array
+            foreach (var grade in grades)       // do this for every number in the array
             {
-                highGrade = Math.Max(number, highGrade);        //returns the highest of the 2 numbers
-                lowGrade = Math.Min(number, lowGrade);          //returns the lowest of the 2 numbers
-                result += number;
+                highGrade = Math.Max(grade, highGrade);        //returns the highest of the 2 numbers
+                lowGrade = Math.Min(grade, lowGrade);          //returns the lowest of the 2 numbers
+                sumOfGrades += grade;
             }
 
-            result /= grades.Count; // DT I'd call this ave or avg or average - call it what it is.  Is part of something called 'Clean Coding' (started by 'Uncle Bob') for when you bored and feel like googling.
+            aveOfGrades = sumOfGrades/grades.Count; // DT I'd call this ave or avg or average - call it what it is.  Is part of something called 'Clean Coding' (started by 'Uncle Bob') for when you bored and feel like googling.
             // I've never seen /= before.  Pro move :)
 
             Console.WriteLine($"\nStatistics for {name}");
             Console.WriteLine($"\nThe lowest grade is {lowGrade}");
             Console.WriteLine($"\nThe highest grade is {highGrade}");
-            Console.WriteLine($"\nThe average grade is {result:N2}");
+            Console.WriteLine($"\nThe average grade is {aveOfGrades:N2}");
         }
     }
 }
