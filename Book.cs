@@ -39,7 +39,7 @@ namespace ConsoleApp8
                 sumOfGrades += grade;
             }
 
-            aveOfGrades /= grades.Count; // DT I'd call this ave or avg or average - call it what it is.  Is part of something called 'Clean Coding' (started by 'Uncle Bob') for when you bored and feel like googling.
+            aveOfGrades = sumOfGrades/grades.Count; // DT I'd call this ave or avg or average - call it what it is.  Is part of something called 'Clean Coding' (started by 'Uncle Bob') for when you bored and feel like googling.
             // I've never seen /= before.  Pro move :)
 
             Console.WriteLine($"\nStatistics for {name}");
