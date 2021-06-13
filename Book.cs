@@ -4,7 +4,7 @@ using System.Collections.Generic;
 // test change 15:09 7 jun
 namespace ConsoleApp8
 {
-    class Book
+    public class Book
     {
         // DT put (class level) variable declarations at the top, so that when you look at a class, you can straight away see what they are, rather than having them hidden away in the code.
         // DT Put blank line between methods, makes it a little less cluttered - also between different things in methods - see what I did in the CalcStats method? It's called whitespace
