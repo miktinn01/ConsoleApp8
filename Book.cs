@@ -11,13 +11,16 @@ namespace ConsoleApp8
         // and use of whitespace does make things more readable.  They are particularly fussy where I am now, and that is fine.
 
         private List<double> grades;
-        private string name;    // creates a private field name
+        //private string name;    // creates a private field name
 
         public Book(string name)       // requires a name when invoke constructor
         {
             grades = new List<double>();
-            this.name = name;       // this is used when the field has the same name a parameter
+            this.Name = name;       // this is used when the field has the same name a parameter
         }
+
+        // DT need public property to test name
+        public string Name { get; set; }
 
         // below creates the method AddGrade
         public void AddGrade(double grade)      //public is an access modifier, it controls access to the member of the class. 
@@ -42,7 +45,7 @@ namespace ConsoleApp8
             aveOfGrades = sumOfGrades/grades.Count; // DT I'd call this ave or avg or average - call it what it is.  Is part of something called 'Clean Coding' (started by 'Uncle Bob') for when you bored and feel like googling.
             // I've never seen /= before.  Pro move :)
 
-            Console.WriteLine($"\nStatistics for {name}");
+            Console.WriteLine($"\nStatistics for {Name}");
             Console.WriteLine($"\nThe lowest grade is {lowGrade}");
             Console.WriteLine($"\nThe highest grade is {highGrade}");
             Console.WriteLine($"\nThe average grade is {aveOfGrades:N2}");
