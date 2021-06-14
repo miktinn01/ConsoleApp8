@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 // test change 15:09 7 jun
+// test change added on 14jun 20h00
 namespace ConsoleApp8
 {
     public class Book
