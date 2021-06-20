@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsoleApp8
+namespace GradeBook_v3
 {
     public class Book
     {
@@ -9,17 +9,16 @@ namespace ConsoleApp8
         // DT Put blank line between methods, makes it a little less cluttered - also between different things in methods - see what I did in the CalcStats method? It's called whitespace
         // DT use of whitespace does make things more readable.  They are particularly fussy where I am now, and that is fine.
 
-        private List<double> grades;
-        //private string name;    // creates a private field name
+        private List<double> grades;    // creates a private List of type double with name grades
 
         public Book(string name)       // requires a name when invoke constructor
         {
-            grades = new List<double>();
-            this.Name = name;       // this is used when the field has the same name a parameter
+            grades = new List<double>(); // this code snippet creates a list of type double & total number of items it can hold is left open.
+            Name = name;       // this is used when the field has the same name a parameter
         }
 
         // DT need public property to test name
-       public string Name { get; set; }
+       public string Name { get; set; }              //{ get; set; } are referred as {{c1::property accessors}} and are auto - implemented properties
 
         // below creates the method AddGrade
         public void AddGrade(double grade)      //public is an access modifier, it controls access to the member of the class. 

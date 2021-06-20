@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsoleApp8
+namespace GradeBook_v3
 {
     public class Statistics
     {
