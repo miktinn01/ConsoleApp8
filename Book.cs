@@ -10,15 +10,17 @@ namespace GradeBook_v3
         // DT use of whitespace does make things more readable.  They are particularly fussy where I am now, and that is fine.
 
         private List<double> grades;    // creates a private List of type double with name grades
+        
 
         public Book(string name)       // requires a name when invoke constructor
         {
             grades = new List<double>(); // this code snippet creates a list of type double & total number of items it can hold is left open.
-            Name = name;       // this is used when the field has the same name a parameter
+            Name = name;       // 
         }
 
         // DT need public property to test name
        public string Name { get; set; }              //{ get; set; } are referred as {{c1::property accessors}} and are auto - implemented properties
+                                                     // by convention public members like Name (or public members, fields or other types) must have Uppercase N
 
         // below creates the method AddGrade
         public void AddGrade(double grade)      //public is an access modifier, it controls access to the member of the class. 
@@ -26,9 +28,9 @@ namespace GradeBook_v3
             grades.Add(grade);
         }
 
-        public Statistics GetStats()
+        public Statistics GetStats()    // this is a method
         {
-            var result = new Statistics();
+            var result = new Statistics();      // creates new object 
             result.Average = 0.0;
             result.High = double.MinValue;        //inicialize variable to the smallest value possible
             result.Low = double.MaxValue;         //inicialize variable to the highest value possible
@@ -41,7 +43,7 @@ namespace GradeBook_v3
                 result.Average+= grade;
             }
             result.Average /= grades.Count; // DT I'd call this ave or avg or average - call it what it is.  Is part of something called 'Clean Coding' (started by 'Uncle Bob') for when you bored and feel like googling.
-            return result;
+            return result;      // returns newly created object 
         }
     }
 }
